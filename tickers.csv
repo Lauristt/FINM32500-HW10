@@ -1,0 +1,6 @@
+ticker_id,symbol,name,exchange
+1,AAPL,Apple Inc.,NASDAQ
+2,MSFT,Microsoft Corp.,NASDAQ
+3,GOOG,Alphabet Inc.,NASDAQ
+4,TSLA,Tesla Inc.,NASDAQ
+5,AMZN,Amazon.com Inc.,NASDAQ

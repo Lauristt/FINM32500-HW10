@@ -1,0 +1,36 @@
+name: Market Data Assignment CI
+
+# Trigger the workflow on push or pull request to the main branch
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Check out the repository code
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # 2. Set up Python (Using 3.11 as shown in your screenshot)
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.11"
+
+    # 3. Install dependencies
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pandas numpy pyarrow
+
+    # 4. Run the Unit Tests
+    # This runs the test suite which generates dummy data, 
+    # creates the DB/Parquet, and verifies logic.
+    - name: Run Unit Tests
+      run: |
+        python -m unittest tests/test_workflow.py

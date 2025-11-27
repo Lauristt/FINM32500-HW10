@@ -38,7 +38,7 @@ This project implements an End-to-End ETL pipeline that ingests raw market data,
 ### **5. Architecture Diagram**
 
 This diagram illustrates the end-to-end ETL and storage workflow used in the project.
-'''
+```
     CSV (Raw Market Data)
             |
             v
@@ -51,7 +51,7 @@ This diagram illustrates the end-to-end ETL and storage workflow used in the pro
 (Row-based OLTP)   (Columnar OLAP Storage)
         |                |
         └----- Benchmark Runner -----┘
-'''
+```
 
 ---
 
